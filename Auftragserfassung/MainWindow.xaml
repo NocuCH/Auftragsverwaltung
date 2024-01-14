@@ -5,8 +5,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Auftragserfassung"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Auftragserfassung" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Background="LightSlateGray" Header="Aufträge"></MenuItem>
+            <MenuItem Background="LightSlateGray" Header="Kunden"></MenuItem>
+            <MenuItem Background="LightSlateGray" Header="Artikel"></MenuItem>
+            <MenuItem Background="LightSlateGray" Header="Artikelgruppen"></MenuItem>
+        </Menu>
 
-    </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <!-- One row definition for each label and textbox pair -->
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <!-- Two columns: one for labels, one for textboxes -->
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Labels and Textboxes for each field -->
+            <Label Grid.Row="0" Grid.Column="0" Content="Auftragsnr"/>
+            <TextBox x:Name="AuftragsNr" Grid.Row="0" Grid.Column="1"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Content="Nachname"/>
+            <TextBox x:Name="Nachname" Grid.Row="1" Grid.Column="1"/>
+
+            <Label Grid.Row="2" Grid.Column="0" Content="Vorname"/>
+            <TextBox x:Name="Vorname" Grid.Row="2" Grid.Column="1"/>
+
+            <Label Grid.Row="3" Grid.Column="0" Content="KundenNr"/>
+            <TextBox x:Name="KundenNr" Grid.Row="3" Grid.Column="1"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Content="Strasse"/>
+            <TextBox x:Name="Strasse" Grid.Row="4" Grid.Column="1"/>
+
+            <Label Grid.Row="5" Grid.Column="0" Content="Postleitzahl"/>
+            <TextBox x:Name="Postleitzahl" Grid.Row="5" Grid.Column="1"/>
+
+            <Label Grid.Row="6" Grid.Column="0" Content="Ort"/>
+            <TextBox x:Name="Ort" Grid.Row="6" Grid.Column="1"/>
+
+            <Label Grid.Row="7" Grid.Column="0" Content="Status"/>
+            <TextBox x:Name="Status" Grid.Row="7" Grid.Column="1"/>
+
+            <Label Grid.Row="8" Grid.Column="0" Content="Lieferdatum"/>
+            <DatePicker x:Name="Lieferdatum" Grid.Row="8" Grid.Column="1"/>
+
+            <DataGrid Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="3">
+                <!-- Configure your DataGrid here -->
+            </DataGrid>
+            <Button Grid.Column="3"  Content="Neuer Auftrag erstellen"/>
+            <Button Grid.Row="1" Grid.Column="3"  Content="Ausgewählter Auftrag bearbeiten"/>
+            <Button Grid.Row="2" Grid.Column="3"  Content="Ausgewählter Auftrag speichern"/>
+            <Button Grid.Row="3" Grid.Column="3"  Content="Ausgewählter Auftrag löschen"/>
+        </Grid>
+
+    </DockPanel>
 </Window>
