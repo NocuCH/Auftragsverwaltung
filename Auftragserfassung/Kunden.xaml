@@ -1,0 +1,81 @@
+﻿<Window x:Class="Auftragserfassung.Kunden"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Auftragserfassung"
+        mc:Ignorable="d"
+        Title="Kunden" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Background="LightSlateGray" Header="Aufträge"></MenuItem>
+            <MenuItem Background="LightSlateGray" Header="Kunden"></MenuItem>
+            <MenuItem Background="LightSlateGray" Header="Artikel"></MenuItem>
+            <MenuItem Background="LightSlateGray" Header="Artikelgruppen"></MenuItem>
+        </Menu>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <!-- One row definition for each label and textbox pair -->
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <!-- Two columns: one for labels, one for textboxes -->
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Labels and Textboxes for each field -->
+            <Label Grid.Row="0" Grid.Column="0" Content="KundenNr"/>
+            <TextBox x:Name="KundenNr" Grid.Row="0" Grid.Column="1"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Content="Nachname"/>
+            <TextBox x:Name="Nachname" Grid.Row="1" Grid.Column="1"/>
+
+            <Label Grid.Row="2" Grid.Column="0" Content="Vorname"/>
+            <TextBox x:Name="Vorname" Grid.Row="2" Grid.Column="1"/>
+
+            <Label Grid.Row="3" Grid.Column="0" Content="Firma"/>
+            <TextBox x:Name="Firma" Grid.Row="3" Grid.Column="1"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Content="Strasse"/>
+            <TextBox x:Name="Strasse" Grid.Row="4" Grid.Column="1"/>
+
+            <Label Grid.Row="5" Grid.Column="0" Content="Postleitzahl"/>
+            <TextBox x:Name="Postleitzahl" Grid.Row="5" Grid.Column="1"/>
+
+            <Label Grid.Row="6" Grid.Column="0" Content="Ort"/>
+            <TextBox x:Name="Ort" Grid.Row="6" Grid.Column="1"/>
+
+            <Label Grid.Row="7" Grid.Column="0" Content="Website"/>
+            <TextBox x:Name="Website" Grid.Row="7" Grid.Column="1"/>
+
+            <Label Grid.Row="8" Grid.Column="0" Content="E-Mail"/>
+            <TextBox Grid.Row="8" Grid.Column="1" x:Name="Email" />
+
+            <Label Grid.Row="10" Grid.Column="0" Content="Suche:" Margin="0,10,0,10"></Label>
+            <TextBox Grid.Row="10" Grid.Column="1" x:Name="KundeSuchen" Margin="0,10,0,10"></TextBox>
+
+            <DataGrid Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="3">
+                <!-- Configure your DataGrid here -->
+            </DataGrid>
+            <Button Grid.Column="3" x:Name="KundeErstellen" Content="Kunde erstellen"/>
+            <Button Grid.Row="1" Grid.Column="3" x:Name="KundeBearbeiten" Content="Ausgewählter Kunde bearbeiten"/>
+            <Button Grid.Row="2" Grid.Column="3" x:Name="KundeSpeichern" Content="Ausgewählter Kunde speichern"/>
+            <Button Grid.Row="3" Grid.Column="3" x:Name="KundeLoeschen" Content="Ausgewählter Kunde löschen"/>
+        </Grid>
+
+    </DockPanel>
+</Window>
