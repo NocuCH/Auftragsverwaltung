@@ -17,9 +17,9 @@ namespace Auftragserfassung
     /// <summary>
     /// Interaction logic for Artikel.xaml
     /// </summary>
-    public partial class Artikel : Window
+    public partial class Artikels : Window
     {
-        public Artikel()
+        public Artikels()
         {
             InitializeComponent();
         }
