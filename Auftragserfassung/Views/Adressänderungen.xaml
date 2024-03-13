@@ -1,0 +1,25 @@
+﻿<Window x:Class="Auftragserfassung.Views.Adressänderungen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Auftragserfassung.Views"
+        mc:Ignorable="d"
+        Title="Adressänderungen" Height="450" Width="800">
+    <Grid>
+        <DataGrid Name="AdressänderungenTabelle" AutoGenerateColumns="False" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Kundennummer" Binding="{Binding Kundennummer}" />
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Strasse" Binding="{Binding Strasse}" />
+                <DataGridTextColumn Header="PLZ" Binding="{Binding PLZ}" />
+                <DataGridTextColumn Header="Ort" Binding="{Binding Ort}" />
+                <DataGridTextColumn Header="Land" Binding="{Binding Land}" />
+                <DataGridTextColumn Header="Rechnungsdatum" Binding="{Binding Rechnungsdatum}" />
+                <DataGridTextColumn Header="Rechnungsnummer" Binding="{Binding Rechnungsnummer}" />
+                <DataGridTextColumn Header="Rechnungsbetrag netto" Binding="{Binding Rechnungsbetrag netto}" />
+                <DataGridTextColumn Header="Rechnungsbetrag brutto" Binding="{Binding Rechnungsbetrag brutto}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

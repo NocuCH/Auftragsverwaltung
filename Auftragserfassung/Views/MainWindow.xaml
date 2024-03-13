@@ -12,6 +12,8 @@
             <MenuItem Background="LightSlateGray" Header="Kunden"></MenuItem>
             <MenuItem Background="LightSlateGray" Header="Artikel"></MenuItem>
             <MenuItem Background="LightSlateGray" Header="Artikelgruppen"></MenuItem>
+            <MenuItem Background="LightSlateGray" Header="Jahresvergleich"></MenuItem>
+            <MenuItem Background="LightSlateGray" Header="Adressänderungen"></MenuItem>
         </Menu>
 
         <Grid>
