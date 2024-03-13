@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Auftragserfassung
 {
-    public class Artikel
+    public partial class Artikel
     {
         public int Id { get; set; }
         public int Artikelnummer { get; set; }

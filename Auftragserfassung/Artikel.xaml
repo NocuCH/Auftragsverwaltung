@@ -36,10 +36,10 @@
             <TextBox x:Name="ArtikelNr" Grid.Row="0" Grid.Column="1"/>
 
             <Label Grid.Row="1" Grid.Column="0" Content="Bezeichnung"/>
-            <TextBox x:Name="Bezeichnung" Grid.Row="1" Grid.Column="1"/>
+            <TextBox x:Name="BezeichnungInput" Grid.Row="1" Grid.Column="1"/>
 
             <Label Grid.Row="2" Grid.Column="0" Content="Preis"/>
-            <TextBox x:Name="Preis" Grid.Row="2" Grid.Column="1"/>
+            <TextBox x:Name="PreisInput" Grid.Row="2" Grid.Column="1"/>
 
             <Label Grid.Row="3" Grid.Column="0" Content="Artikelgruppe"/>
             <TextBox x:Name="Artikelgruppe" Grid.Row="3" Grid.Column="1"/>
