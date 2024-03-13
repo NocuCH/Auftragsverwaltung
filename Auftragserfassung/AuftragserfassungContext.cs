@@ -20,5 +20,12 @@ namespace Auftragserfassung
             optionsBuilder.EnableDetailedErrors();
             optionsBuilder.EnableSensitiveDataLogging();
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder) {
+            modelBuilder
+                .Entity<Kunde>()
+                .ToTable("Kunde", b => b.IsTemporal());
+        }
+
     }
 }
