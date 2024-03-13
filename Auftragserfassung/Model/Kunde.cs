@@ -18,8 +18,8 @@ namespace Auftragserfassung
         private string email;
         private string website;
         private string passwort;
-        public int Id { get; private set; }
-        public int KundenNr { get; private set; }
+        public int Id { get; set; }
+        public int KundenNr { get; set; }
         public string Vorname {
             get { return vorname; }
             set {

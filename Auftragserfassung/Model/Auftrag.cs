@@ -10,8 +10,8 @@ namespace Auftragserfassung
 {
     public class Auftrag : INotifyPropertyChanged
     {
-        public int Id { get; private set; }
-        public int Auftragsnummer { get; private set; }
+        public int Id { get; set; }
+        public int Auftragsnummer { get; set; }
         public DateTime Datum {
             get { return datum; } 
             set {
@@ -19,7 +19,7 @@ namespace Auftragserfassung
                 this.propertyChanged(nameof(Datum));
             }
         }
-        public Kunde Kunde { get; private set; }
+        public Kunde Kunde { get; set; }
         public virtual ICollection<Position> Positionen { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
         private DateTime datum;
