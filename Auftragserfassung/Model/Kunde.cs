@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -77,7 +78,6 @@ namespace Auftragserfassung
             }
         }
         public Kunde() {
-            Id = 11;
             KundenNr = 11;
             vorname = "vorname";
             nachname = "nachname";

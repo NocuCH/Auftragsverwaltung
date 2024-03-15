@@ -16,7 +16,18 @@ namespace Auftragserfassung {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
-            this.DataContext = new Auftrag();
+            var a = new Auftrag();
+            a.Kunde = new Kunde();
+            this.DataContext = a;
+
+            AuftragDataGrid.ItemsSource = Auftrag.selectAll();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e) {
+            var a = new Auftrag();
+            a.Kunde = new Kunde();
+            this.DataContext = a;
+        }
+
     }
 }

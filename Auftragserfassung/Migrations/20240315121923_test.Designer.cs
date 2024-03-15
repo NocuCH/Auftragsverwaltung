@@ -4,6 +4,7 @@ using Auftragserfassung;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Auftragserfassung.Migrations
 {
     [DbContext(typeof(AuftragserfassungContext))]
-    partial class AuftragserfassungContextModelSnapshot : ModelSnapshot
+    [Migration("20240315121923_test")]
+    partial class test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,7 +50,7 @@ namespace Auftragserfassung.Migrations
 
                     b.HasIndex("GruppeId");
 
-                    b.ToTable("Artikel", (string)null);
+                    b.ToTable("Artikel");
                 });
 
             modelBuilder.Entity("Auftragserfassung.Artikelgruppe", b =>
@@ -69,7 +72,7 @@ namespace Auftragserfassung.Migrations
 
                     b.HasIndex("ParentId");
 
-                    b.ToTable("Artikelgruppen", (string)null);
+                    b.ToTable("Artikelgruppen");
                 });
 
             modelBuilder.Entity("Auftragserfassung.Auftrag", b =>
@@ -93,7 +96,7 @@ namespace Auftragserfassung.Migrations
 
                     b.HasIndex("KundeId");
 
-                    b.ToTable("Auftraege", (string)null);
+                    b.ToTable("Auftraege");
                 });
 
             modelBuilder.Entity("Auftragserfassung.Kunde", b =>
@@ -141,7 +144,7 @@ namespace Auftragserfassung.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Kunden", (string)null);
+                    b.ToTable("Kunden");
                 });
 
             modelBuilder.Entity("Auftragserfassung.Model.Position", b =>
@@ -170,7 +173,7 @@ namespace Auftragserfassung.Migrations
 
                     b.HasIndex("AuftragId");
 
-                    b.ToTable("Position", (string)null);
+                    b.ToTable("Position");
                 });
 
             modelBuilder.Entity("Auftragserfassung.Artikel", b =>
